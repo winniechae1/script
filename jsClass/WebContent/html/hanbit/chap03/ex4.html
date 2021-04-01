@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href="../../css/w3.css">
+<link rel="stylesheet" type="text/css" href="../../css/user.css">
+<style type="text/css">
+
+</style>
+<script type="text/javascript">
+	/* 
+		prompt()함수로 문자열을 입력받아 "안녕"이 들어가있으면 "안녕하세요", 
+		"잘자" 또는 "잘 자"를 입력하면 "안녕히 주무세요"를 출력하는 코드 작성 
+	*/
+	
+	var sen = prompt('문자열을 입력하세요.','');
+	var output = sen.indexOf('안녕');
+	if(output >= 0){
+		alert('안녕하세요');
+	} else if (sen == '잘자' || sen == '잘 자'){
+		alert('안녕히 주무세요');
+	} else {
+		alert('문자열이 포함되어있지 않습니다.');
+	}
+	
+</script>
+</head>
+<body>
+
+
+<script type="text/javascript">
+
+</script>
+</body>
+</html>

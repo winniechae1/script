@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href="../../css/w3.css">
+<link rel="stylesheet" type="text/css" href="../../css/user.css">
+<style type="text/css">
+
+</style>
+<script type="text/javascript">
+	var kor = Number(prompt('국어 점수를 입력하세요.>', '60'));
+	var eng = Number(prompt('영어 점수를 입력하세요.>', '60'));
+	var math = Number(prompt('수학 점수를 입력하세요.>', '60'));
+	
+	var avg = (kor + eng + math) / 3;
+	
+	if(avg >= 90) {
+		alert('수'); 
+	} else if (avg >= 80){
+		alert('우');
+	} else if (avg >= 70){
+		alert('미');
+	} else if (avg >= 60){
+		alert('양');
+	} else {
+		alert('가');
+	}
+</script>
+</head>
+<body>
+
+
+<script type="text/javascript">
+
+</script>
+</body>
+</html>

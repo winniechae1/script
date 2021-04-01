@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href="../../css/w3.css">
+<link rel="stylesheet" type="text/css" href="../../css/user.css">
+</head>
+<body>
+	<div class="w3-content mxw600 w3-center">
+		<h1 class="w3-deep-purple w3-padding w3-card-4 w3-round-large">Login</h1>
+		<form method="get" action="" name="frm" id="frm" 
+			class="w3-col w3-margin-top w3-card-4 w3-round-large">
+			<div class="w3-col w3-margin-top">
+				<label for="id" class="w3-col m2 w3-text-right">I D : </label>
+				<input type="text" name="id" id="id" placeholder="아이디를 입력하세요!"
+					class="w3-col s9 w3-input w3-border w3-border-indigo">
+			</div>	
+			<div class="w3-col w3-margin-top w3-margin-bottom">
+				<label for="pw" class="w3-col m2 w3-text-right">P W : </label>
+				<input type="password" name="pw" id="pw" placeholder="비밀번호를 입력하세요!"
+					class="w3-col s9 w3-input w3-border w3-border-indigo">
+			</div>	
+		</form>
+		<div class="w3-col w3-margin-top">
+			<div class="w3-third w3-red w3-button w3-hover-deep-orange" id="cbtn">취소</div>
+			<div class="w3-third w3-amber w3-button w3-hover-orange" id="rbtn">리셋</div>
+			<div class="w3-third w3-light-green w3-button w3-hover-lime"
+				id="sbtn">제출</div>
+		</div>
+	</div>
+
+<script type="text/javascript">
+	document.getElementById('sbtn').onclick = function(){
+		var sid = document.frm.id.value;
+		if(!sid){
+			alert('입력하세요');
+		}
+		alert(sid);
+	}
+	var sid = document.frm.id.value;
+</script>
+</body>
+</html>

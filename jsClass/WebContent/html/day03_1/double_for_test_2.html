@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href="../../css/w3.css">
+<link rel="stylesheet" type="text/css" href="../../css/user.css">
+<style type="text/css">
+
+</style>
+<script type="text/javascript">
+
+
+	var num = 1;
+	var t = "<table border='1'>";
+	for (var i = 1; i <= 5; i++) {
+		t += "<tr>";
+		for (var k = 1; k <= 5; k++) {
+			t += "<td>" + num + "</td>"; 	// <td>태그는 데이터 셀을 정의할때 사용
+			num++;
+		}
+		t += "</tr>";
+	}
+	t += "</table>";
+
+	document.write(t);
+	
+</script>
+</head>
+<body>
+
+
+<script type="text/javascript">
+</script>
+</body>
+</html>
