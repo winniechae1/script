@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href="../../css/w3.css">
+<link rel="stylesheet" type="text/css" href="../../css/user.css">
+<style type="text/css">
+
+</style>
+<script type="text/javascript">
+	function Rectangle(w, h){
+		var width = w; 
+		var height = h;
+		
+		this.getWidth = function(){
+			return width;
+		};
+		this.getHeight = function() {
+			return height;
+		};
+		this.setWidth = function(w){
+			if (w < 0) {
+				throw '길이는 음수일 수 없습니다.';
+			} else {
+				width = w;
+			}
+		};
+		
+		this.setHeight = function(h){
+			if (h < 0) {
+				throw '길이는 음수일 수 없습니다.';
+			} else {
+				height = h;
+			}
+		};
+	}
+	
+	Rectangle.prototype.getArea = function() {
+		return this.getWidth() * this.getHeight();
+	};
+	
+	var rectangle = new Rectangle(5, 7);
+	rectangle.setWidth(3);
+	
+	alert('AREA: ' + rectangle.getArea());
+</script>
+</head>
+<body>
+
+
+<script type="text/javascript">
+
+</script>
+</body>
+</html>

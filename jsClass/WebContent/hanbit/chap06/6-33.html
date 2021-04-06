@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href="../../css/w3.css">
+<link rel="stylesheet" type="text/css" href="../../css/user.css">
+<style type="text/css">
+
+</style>
+<script type="text/javascript">
+
+/*
+	var originalArray = [1, 2, 3, 4, 5];
+	
+	var newArray = [];
+	for(var i = 0; i < origianlArray.length; i++){
+		newArray[i] = originalArray[i];
+	}
+*/
+	// 배열 복제 간단히 하는 방법 
+	const originalArray = [1, 2, 3, 4, 5];
+	
+	const newArray = [...originalArray];
+	
+	originalArray[0] = 52;
+	originalArray[1] = 273;
+	alert(originalArray);
+	alert(newArray);
+	
+</script>
+</head>
+<body>
+
+
+<script type="text/javascript">
+
+</script>
+</body>
+</html>

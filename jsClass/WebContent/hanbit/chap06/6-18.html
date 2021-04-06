@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href="../../css/w3.css">
+<link rel="stylesheet" type="text/css" href="../../css/user.css">
+<style type="text/css">
+
+</style>
+<script type="text/javascript">
+	// 객체의 속성 제거 
+	var student = {};
+	student.이름 = '윤인성';
+	student.취미 = '악기';
+	student.특기 = '프로그래밍';
+	student.장래희망 = '생명공학자';
+	
+	// toString() 객체에 있는 속성을 출력하는 메서드 
+	student.toString = function(){
+		var output = '';
+		for(var key in this){
+			if (key != 'toString') {
+				output += key + '\t' + this[key] + '\n';
+			}
+		}
+		return output;
+	};
+	
+	alert(student.toString());
+	
+	delete(student.장래희망);
+	
+	alert(student);
+</script>
+</head>
+<body>
+
+
+<script type="text/javascript">
+
+</script>
+</body>
+</html>

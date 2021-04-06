@@ -25,4 +25,5 @@ var w3color = [
 	'w3-khaki',
 	'w3-pale-blue',
 	'w3-light-blue',
+	'w3-tomato',
 ];

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href="../../css/w3.css">
+<link rel="stylesheet" type="text/css" href="../../css/user.css">
+<style type="text/css">
+
+</style>
+<script type="text/javascript">
+	//	객체에 속성 추가
+		var student = {};
+		student.이름 = '윤인성';
+		student.취미 = '악기';
+		student.특기 = '프로그래밍';
+		student.장래희망 = '생명공학자';
+	
+	// toString() 메서드를 만든다.
+	student.toString = function() {
+		var output = '';
+		for (var key in this){
+			if(key != 'toString') {
+				output += key + '\t' + this[key] + '\n';
+			}
+		}
+		return output;
+	};
+	
+	alert(student.toString());
+</script>
+</head>
+<body>
+
+
+<script type="text/javascript">
+
+</script>
+</body>
+</html>

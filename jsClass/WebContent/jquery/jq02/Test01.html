@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href="../../css/w3.css">
+<link rel="stylesheet" type="text/css" href="../../css/user.css">
+<!-- jQuery 라이브러리 가져오기 -->
+<script type="text/javascript" src="../../js/jquery-3.6.0.min.js"></script>
+<style type="text/css">
+
+</style>
+<script type="text/javascript">
+	$(document).ready(function() {
+		/* 이 부분에 jQuery 코딩을 하면 된다. */
+		
+		$('.mxw600 *').css('background-color','tomato');
+		$('body *').css('font-size','10pt');
+		$('.mxw600 *').css('margin','0px');
+		$('.mxw600 *').css('padding','0px');
+		$('.mxw600 *').css('display','inline-block');
+		$('.mxw600 *').css('height','30px');
+		$('.mxw600 > *').addClass('w3-hover-orange');
+		/* 	
+			태그의 스타일 속성 변경 
+			자바스크립트에서는 style property에 접근해서 변경해줬지만 
+			제이쿼리에서는 css() 함수를 사용해서 처리한다.
+		*/
+		
+		$('#sp1').css('font-size','14pt');
+		$('#sp1').css('font-weight','bold');
+		
+		$('h3, p').css('color','indigo');
+		$('h3, p').css('font-weight','bold');
+		
+		$('#sp1').parent().css('height', '60px');
+		$('#sp1').parent().css('overflow', 'hidden');
+		
+		$('.mxw600').children().css('border', '3px dotted purple');
+		
+		/*  span 태그의 이전 요소의 border-color 변경  */
+		$('span').prev().css('border-color','yellow');
+		
+		/* p 태그의 이전 요소들의 높이를 100 변경 */
+		$('p').prevAll().css('height','100px');
+		
+		// span 태그의 이전 태그들 중 div 태그 이전까지 backgroud-color : pink 
+		$('span').prevUntil('div').css('background-color','pink');
+		// 아이디가 d1인 태그의 모든 형제 태그들을 오른쪽 정렬하자.
+		$('#d1').siblings().css('text-align','right');
+		
+		// 아이디가 d1인 태그의 모든 형제태그들에게 클릭이벤트가 발생하면 해당태그의 내용을
+		// 모달창으로 띄워주는 코드를 작성해보자.
+			$('#d1').siblings().click(function() {
+				var txt = $(this).html();
+				$('#txt').html(txt);
+				$('#id01').css('display','block');
+			});
+		
+		/* 
+			jQuery 에서 태그 내용 읽는 방법
+				
+				1. 일반태그
+					html()	-	자바스크립트의 innerHTML 속성의 기능
+					text()	-	자바스크립트의 innerText 속성의 기능 
+					
+				2. 입력태그 
+					val()	-	자바스크립트의 value 속성의 기능 
+			
+		*/
+		/*  
+			jQuery 이벤트 추가 방법
+			
+			형식]
+				$(태그선택).이벤트이름(function() {
+					처리내용...
+				});
+			
+			참고]
+				자바스크립트의 경우 여러 태그를 선택해서 한번에 이벤트를 주는 것이 힘들다.
+				제이쿼리에서는 선택된 태그 모두에게 이벤트가 등록이 된다.
+				
+			참고]
+				$(document).ready(function(){
+					이 안에서 태그를 선택해서 이벤트를 등록해주는 경우는 페이지가 처음 로딩된 이후
+					만들어져있는 태그들에게만 이벤트가 등록이 된다.
+				});
+		*/
+		
+	});
+</script>
+</head>
+<body>
+	<div class="w3-content mxw600">
+		<div class="w3-col m3" id="d1">div tag
+			<span id="sp1">div 하위 span</span>
+		</div>
+		<h3 class="w3-col m3">H3 tag</h3>
+		<p class="w3-col m3">p Tag</p>
+		<span class="w3-col m3">span Tag</span>
+	</div>
+	<!-- modal -->
+	<div id="id01" class="w3-modal">
+    	<div class="w3-modal-content w3-card-4">
+      		<header class="w3-container w3-deep-orange"> 
+        	<span onclick="document.getElementById('id01').style.display='none'" 
+        class="w3-button w3-display-topright">&times;</span>
+        <h2>Modal Header</h2>
+      </header>
+      <div class="w3-container">
+        <p id="txt">Some text..</p>
+      </div>
+     </div>
+     </div>
+     
+     
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href="../../css/w3.css">
+<link rel="stylesheet" type="text/css" href="../../css/user.css">
+<style type="text/css">
+
+</style>
+<script type="text/javascript">
+/*
+	// 생성자
+	function Product(name, weight, price) {
+		this.name = name;
+		this.weight = weight;
+		this.price = price;
+		
+		this.calculate = function(weight){
+			return this.price * (weight/this.weight);
+		}		
+	}
+
+		let product = new Product('삼겹살', 100, 1690);
+		alert('가격은' + product.calculate(Number(prompt('무게입력')))+'원 입니다.');
+*/	
+	// 프로토타입
+	function Product(name, weight, price){
+		this.name = name;
+		this.weight = weight;
+		this.price = price;
+	}
+	Product.prototype.calculate = function (weight){
+		return this.price * (weight/this.weight);
+	}
+	let product = new Product('삼겹살', 100, 1690);
+	alert('가격은' + product.calculate(Number(prompt('무게입력')))+'원 입니다.');
+</script>
+</head>
+<body>
+
+
+<script type="text/javascript">
+
+</script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href="../../css/w3.css">
+<link rel="stylesheet" type="text/css" href="../../css/user.css">
+<style type="text/css">
+
+</style>
+<script type="text/javascript">
+	// 객체 복사: 깊은 복사 (새로운 객체를 만들어 for in 반복문으로 키와 값을 옮기는 것)
+	
+	function clone(obj){
+		var output = {};
+		for(var i in obj){
+			output[i] = obj[i];
+		}
+		return output;
+	}		
+		var original = { a: 10, b: 20 };
+		var referenced = original;	// 얕은 복사
+		var cloned = clone(original);	// 깊은 복사
+		
+		original.a = 20;
+		
+		alert(JSON.stringify(referenced, null, 2))
+		alert(JSON.stringify(cloned, null, 2))
+</script>
+</head>
+<body>
+
+
+<script type="text/javascript">
+
+</script>
+</body>
+</html>

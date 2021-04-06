@@ -1,0 +1,181 @@
+html, body {
+	
+	text-align: center;
+	font-size: 0pt;
+	
+}
+.content {
+	display: inline-block;
+	width: 768px;
+}
+.head {
+	width: 100%;
+	text-align: center;
+}
+.logoBox {
+	display: inline-block;
+	width: 240px;
+	height: 44px;
+	padding: 60px 0px 20px;
+	text-align: center;
+}
+.tlogo {
+	display: inline-block;
+	/* border: 1px solid red; */
+	width: 240px;
+	height: 44px;
+	background-image: url("../img/nlogos.png");
+	background-size: 242px auto;
+	background-repeat: norepeat; 
+	cursor: pointer;
+}
+.inBox {
+	display: inline-block;
+	width: 460px;
+	text-align: left;
+}
+.inputTitle {
+	
+	display: inline-block;
+	font-size: 14px;
+	font-weight: 700;
+	width: 100%;
+	text-align: left;
+	margin: 19px 0 8px;
+}
+.inputFr {
+	display: inline-block;
+	width: 100%;
+	height: 51px;
+	border: 1px solid #dadada;
+	padding: 10px 110px 10px 14px;
+	box-sizing: border-box;
+}
+
+.pwimg {
+    width: 18px;
+    height: 20px;
+    display: inline-block;
+    position: relative;
+    top: -8px;
+    left: 400px;
+    margin-top: -50px;
+    cursor: pointer;
+}
+
+.box {
+	display: block;
+	position: relative;
+	width: 100%;
+	height: 51px;
+	border: solid 1px #dadada;
+	background: #fff;
+	box-sizing: border-box;
+	padding: 10px 14px 10px 14px;
+}
+
+ 
+.inputId {
+	display: inline-block;
+	width: 333.33px;
+	height: 29px;
+	padding: 0px 25px 0px 0px;
+	box-sizing: border-box;
+	border: none;
+	outline: none;
+}
+.idDomain {
+	display: inline-block;
+	position: relative;
+	top: -25px;
+	right: -345px;
+	font-size: 15px;
+    line-height: 18px;
+	box-sizing: border-box;
+    color: #8e8e8e;
+}
+
+.int {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    height: 29px;
+    border: none;
+    background: #fff;
+    font-size: 15px;
+    
+}
+.input {
+	 font-family: Dotum,'돋움',Helvetica,sans-serif;    
+}
+
+#birth {display: table; width: 100%; }
+#birthyy { display: table-cell; width: 147px; }
+#birthmm { display: table-cell; width: 147px; vertical-align: middle; padding: 0 0 0 10px; }
+#birthdd { display: table-cell; width: 147px; padding: 0 0 0 10px; }
+
+
+.btnsend {
+	width: 130px;
+	height: 53px;
+	text-align: center;
+	box-sizing: border-box;
+	text-decoration: none;
+	color: #fff;
+	border: solid 1px rgba(0,0,0,.08);
+	background-color: #03c75a;
+	padding: 17px 0px 17px;
+	display: block;
+	font-size: 15px;
+	cursor: pointer;
+	
+	
+}
+
+#enter {
+	display: table; position: relative; 
+	width: 100%; 
+	margin-top: 10px;
+	}
+#getnum { display: table-cell; padding-left: 10px; }
+#enternum { padding-top: 10px; }
+
+
+.int:focus {
+	outline: none;
+	border: 1px solid lightgreen;
+}
+
+
+.btnjoin {
+	display: block;
+	width: 100%;
+	padding: 15px 0px 15px;
+	font-size: 18px;
+	cursor: pointer;
+	box-sizing: border-box;
+	text-align: center;
+	color: #fff;
+    border: solid 1px rgba(0,0,0,.08);
+    background-color: #03c75a;
+    text-decoration: none;
+    margin: 28px 0px 6px;
+}
+
+.alertMsg {
+	display: none;
+    margin: 9px 0 -2px;
+    font-size: 12px;
+    line-height: 14px;
+    color: red;
+}
+.footer {
+	clear: both;
+	margin: 0 auto;
+	text-align: center;
+	
+}
+ul {
+	display: block;
+	
+}

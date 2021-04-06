@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href="../../css/w3.css">
+<link rel="stylesheet" type="text/css" href="../../css/user.css">
+<style type="text/css">
+	.pdl20 {
+		padding-left: 20px;
+	}
+	label {
+		font-size: 12pt;
+		font-weight: bold;
+		line-height: 230%;
+		opacity: 0.5;
+	}
+	.showData {
+		height: 40px;
+	}
+	.showBody {
+		height: 150px;
+		overflow: auto;
+	}
+</style>
+</head>
+<body>
+	<div class="w3-content mxw650">
+		<h1 class="w3-deep-orange w3-center w3-card-4 w3-round-large">방명록 내용</h1>
+		
+		<div class="w3-container w3-margin-top w3-card-4 w3-round-large">
+			
+			<div class="w3-row w3-margin-top">
+				<div class="w3-col m2 w3-right-align">
+					<label class="w3-text-grey">아이디 : </label>
+				</div>
+				<div class="w3-col m8 pdl20">
+					<div id="id" class="w3-col w3-center w3-input w3-border w3-border-grey showData"></div>
+				</div>
+			</div>
+			<div class="w3-row w3-margin-top">
+				<div class="w3-col m2 w3-right-align">
+					<label class="w3-text-grey">비밀번호 : </label>
+				</div>
+				<div class="w3-col m8 pdl20">
+					<div id="pw" class="w3-col w3-center w3-input w3-border w3-border-grey showData"></div>
+				</div>
+			</div>
+			<div class="w3-row w3-margin-top w3-margin-bottom">
+				<div class="w3-col m2 w3-right-align">
+					<label class="w3-text-grey">글 내 용 : </label>
+				</div>
+				<div class="w3-col m8 pdl20">
+					<div id="body" class="w3-col w3-input w3-border w3-border-grey showBody"></div>
+				</div>
+			</div>
+		</div>
+		
+		<!-- 버튼 -->
+		<div class="w3-row w3-margin-top w3-card-4">
+			<div class="w3-half w3-button w3-green w3-hover-lime" id="pre">이전</div>
+			<div class="w3-half w3-button w3-blue w3-hover-aqua" id="show">데이터 읽기</div>
+		</div>
+	</div>
+
+<script type="text/javascript">
+	
+	var sparam = decodeURI(decodeURI(location.search)).substring(1);
+	sparam = sparam.replace('\n', '<br>');
+	
+	var parr = {};
+	
+	var arr = sparam.split('&');
+	// ==> ['id=ys', 'pw=12345', 'body=********']
+	arr.forEach(function(item, index){
+		parr[item.substring(0, item.indexOf('='))] = item.substring(item.indexOf('=') + 1);
+	});
+	
+	document.getElementById('pre').onclick = function(){
+		location.href = 'Ex01.html'; // GET 방식으로 요청 하는 방법
+	}
+	
+	// 읽기 버튼 이벤트 추가
+	document.getElementById('show').onclick = function(){
+		document.getElementById('id').innerHTML = parr.id;
+		document.getElementById('pw').innerHTML = parr.pw;
+		document.getElementById('body').innerHTML = parr.body;
+	}
+</script>
+</body>
+</html>
