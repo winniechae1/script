@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href="../../css/w3.css">
+<link rel="stylesheet" type="text/css" href="../../css/user.css">
+<script type="text/javascript" src="../../js/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="../../js/w3color.js"></script>
+<style type="text/css">
+	.high-light-0 {
+		background-color: yellow;
+	}
+	.high-light-1 {
+		background-color: orange;
+	}
+	.high-light-2 {
+		background-color: blue;
+	}
+	.high-light-3 {
+		background-color: green;
+	}
+	.high-light-4 {
+		background-color: red;
+	}
+</style>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$('h1').addClass('high-light');		
+	});
+	/*
+	$(document).ready(function (){
+		$('h1').each(function (index, item){
+			$(item).addClass('high-light-' + index);
+		});
+	*/
+	$(document).ready(function (){
+		$('h1').each(function (index, item){
+			$(this).addClass('high-light-' + index);
+		});
+	});
+</script>
+</head>
+<body>
+	<h1>item -0</h1>
+	<h1>item -1</h1>
+	<h1>item -2</h1>
+	<h1>item -3</h1>
+	<h1>item -4</h1>
+</body>
+</html>

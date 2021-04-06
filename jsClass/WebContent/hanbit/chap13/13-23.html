@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href="../../css/w3.css">
+<link rel="stylesheet" type="text/css" href="../../css/user.css">
+<script type="text/javascript" src="../../js/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="../../js/w3color.js"></script>
+<style type="text/css">
+
+</style>
+<script type="text/javascript">
+
+	$(document).ready(function(){
+		setTimeout(function () {
+			var value = $('select > option:selected').val();
+			
+			alert(value);
+		}, 5000);
+	});
+	
+	$document.ready(function() {
+		setTimeout(function () {
+			var value = $('select > option:selected').val();	
+		});
+	});
+</script>
+</head>
+<body>
+	<select>
+		<option>Apple</option>
+		<option>Bag</option>
+		<option>Cat</option>
+		<option>Dog</option>
+		<option>Elephant</option>
+	</select>
+	
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href="../../css/w3.css">
+<link rel="stylesheet" type="text/css" href="../../css/user.css">
+<script type="text/javascript" src="../../js/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="../../js/w3color.js"></script>
+<style type="text/css">
+
+</style>
+<script type="text/javascript">
+	$(document).ready(function() {
+		
+		var array = [
+			{name: 'Hanbit Media', link: 'http://hanbit.co.kr'},
+			{name: 'Naver', link: 'http://naver.com'},
+			{name: 'Daum', link: 'http://daum.net'}
+		];
+		
+		$.each(array,function(index,item){
+			
+		});
+		
+		$.each(array, function(index,item){
+			var output = '';
+			
+			output += '<a href="' + item.link + '">';
+			output += '		<h1>' + item.name + '</h1>';
+			output += '<a>';
+			
+			document.body.innerHTML += output;
+		});
+	});
+</script>
+</head>
+<body>
+
+</body>
+</html>
