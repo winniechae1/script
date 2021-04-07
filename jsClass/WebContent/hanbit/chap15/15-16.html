@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href="../../css/w3.css">
+<link rel="stylesheet" type="text/css" href="../../css/user.css">
+<script type="text/javascript" src="../../js/jquery-3.6.0.min.js"></script>
+<style type="text/css">
+
+</style>
+<script type="text/javascript">
+	// Setter
+	$(document).ready(function () {
+	//	$('h1').css('color','red');
+		
+		var color = ['red', 'pink', 'purple'];
+		/*
+		$('h1').css('color', function(index) {
+			return color[index];
+		});
+		*/
+		$('h1').css({
+			color: function (index){
+				return color[index];
+			}, backgroundColor: 'black'
+		});
+	});
+</script>
+</head>
+<body>
+	<h1>Header-0</h1>
+	<h1>Header-1</h1>
+	<h1>Header-2</h1>
+</body>
+</html>

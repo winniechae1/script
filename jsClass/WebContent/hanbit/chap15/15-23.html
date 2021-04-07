@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href="../../css/w3.css">
+<link rel="stylesheet" type="text/css" href="../../css/user.css">
+<script type="text/javascript" src="../../js/jquery-3.6.0.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$('div').html('<h1>$().html() Method</h1>');
+
+		$('div').text('<h1>$().html() Method</h1>');	
+		// text() HTML 태그를 인식하지 않는다.
+		
+		$('div').html(function(index) {
+			return '<h1>Header-' + index + '</h1>';
+		});
+	});
+</script>
+</head>
+<body>
+	<div></div>
+	<div></div>
+	<div></div>
+</body>
+</html>

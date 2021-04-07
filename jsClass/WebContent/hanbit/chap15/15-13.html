@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href="../../css/w3.css">
+<link rel="stylesheet" type="text/css" href="../../css/user.css">
+<script type="text/javascript" src="../../js/jquery-3.6.0.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function (){
+		$('h1').removeAttr('data-index');
+		// removeAttr() 모든 클래스 속성이 한 번에 제거된다.
+		// removeClass() 여러개의 클래스 속성 중에서 선택적으로 제거할 수 있다.
+		
+	});
+</script>
+</head>
+<body>
+	<h1 data-index="0">Header-0</h1>
+	<h1 data-index="1">Header-1</h1>
+	<h1 data-index="2">Header-2</h1>
+</body>
+</html>
