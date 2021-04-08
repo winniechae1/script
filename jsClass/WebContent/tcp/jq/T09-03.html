@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href="../../css/w3.css">
+<link rel="stylesheet" type="text/css" href="../../css/user.css">
+<script type="text/javascript" src="../../js/jquery-3.6.0.min.js"></script>
+<style type="text/css">
+
+</style>
+<script type="text/javascript">
+	$(function() {
+		$('button').on('click',function(){
+			$('.content').remove(".first, .second");
+		});
+	});
+</script>
+</head>
+<body>
+	<h1>.remove() 메소드</h1>
+	<div>
+		<div class="content first">첫 번째 컨텐츠에요!</div>
+		<div class="content second">두 번째 컨텐츠에요!</div>
+		<div class="content third">세 번째 컨텐츠에요!</div>
+	</div>
+	<br>
+	<button>div 요소 삭제</button>
+</body>
+</html>

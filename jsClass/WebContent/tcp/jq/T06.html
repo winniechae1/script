@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href="../../css/w3.css">
+<link rel="stylesheet" type="text/css" href="../../css/user.css">
+<script type="text/javascript" src="../../js/jquery-3.6.0.min.js"></script>
+<style type="text/css">
+
+</style>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('button').on('click', function() {
+			$('#list').append("<li>새로 추가된 아이템이에요</li>");
+		});
+	});
+</script>
+</head>
+<body>
+	<h1>.append() 메소드</h1>
+	<ul id="list">
+		<li>첫번째 아이템</li>
+		<li>두번째 아이템</li>
+		<li>세번째 아이템</li>
+	</ul>
+	<button>아이템 추가</button>
+</body>
+</html>

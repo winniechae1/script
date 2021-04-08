@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href="../../css/w3.css">
+<link rel="stylesheet" type="text/css" href="../../css/user.css">
+<script type="text/javascript" src="../../js/jquery-3.6.0.min.js"></script>
+<style type="text/css">
+
+</style>
+<script type="text/javascript">
+	$(document).ready(function (){
+		$('button').on('click',function(){
+			$('#firstItem').replaceAll('.item');
+		});
+	});
+</script>
+</head>
+<body>
+	<h1>.replaceAll() 메소드</h1>
+	<ul>
+		<li class="item" id="firstItem">첫 번째 아이템이에요!</li>
+		<li class="item" id="secondItem">두 번째 아이템이에요!</li>
+		<li class="item" id="thirdItem">세 번째 아이템이에요!</li>
+	</ul>
+	<button>아이템 대체</button>
+</body>
+</html>

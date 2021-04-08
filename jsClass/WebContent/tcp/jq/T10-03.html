@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href="../../css/w3.css">
+<link rel="stylesheet" type="text/css" href="../../css/user.css">
+<script type="text/javascript" src="../../js/jquery-3.6.0.min.js"></script>
+<style type="text/css">
+	.container * { 
+			display: block;
+			border: 1px solid lightgray;
+			padding: 5px;
+			margin: 15px;
+		}
+</style>
+<script type="text/javascript">
+	$(function() {
+		$('#parents').on('click',function(){
+			$('#origin').parents('div').css('border','2px solid red');
+		});
+		$('#closest').on('click',function(){
+			$('#origin').closest('div').css('border','2px solid green');
+		});
+	});
+</script>
+</head>
+<body>
+	<h1>.parents() 메소드</h1>
+	<div class="container">
+		<div>div 요소
+			<div>div 요소
+				<ul>ul 요소
+					<li>li 요소</li>
+					<li>li 요소
+						<div id="origin">div 요소 (기준)
+							<span>span 요소</span>
+						</div>
+					</li>
+					<li>li 요소</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<button id="parents">parents() 메소드</button>
+	<button id="closest">closest() 메소드</button>
+	
+</body>
+</html>

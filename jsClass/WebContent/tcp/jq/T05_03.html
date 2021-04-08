@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href="../../css/w3.css">
+<link rel="stylesheet" type="text/css" href="../../css/user.css">
+<script type="text/javascript" src="../../js/jquery-3.6.0.min.js"></script>
+<style type="text/css">
+
+</style>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('#getter').on('click',function (){
+			var size = "너비는 " + $('#box').width() + 'px이고, 높이는 ' + $('#box').height()
+			+ "px입니다.<br>";
+			$('#text').html(size);
+		});
+		$('#setter').on('click',function() {
+			w = $('#box').width();
+			h = $('#box').height();
+			$('#box').width(w/2).height(h/2);
+			var size = "너비는 " + $('#box').width() + 'px이고, 높이는 ' + $('#box').height()
+			+ "px로 변경되었습니다.<br>";
+			$('#text').html(size);
+			
+			/* 
+				getter setter 메소드 
+				.html() : 해당 요소의 html 콘텐츠를 반환하거나 설정함.
+				.text() : 해당 요소의 텍스트 콘텐츠를 반환하거나 설정함 
+				.width() : 선택한 요소 중 첫번째 요소의 너비를 픽셀단위의 정수로 반환하거나 설정함
+				.val() : <form>요소의 값을 반환하거나 설정함.
+			*/
+		});
+	});
+</script>
+</head>
+<body>
+	<h1>.width() 메소드와 .height() 메소드</h1>
+	
+	<p>아래의 버튼을 누르면 다음 div 요소의 크기를 읽어오거나 설정할 수 있어요</p>
+	<button id="getter">크기 읽어오기</button>
+	<button id="setter">크기 줄이기</button><br><br>
+	<div id="box" style="width: 400px; height: 200px; background-color: yellow"></div>
+	<p id="text"></p>
+</body>
+</html>

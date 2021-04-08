@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href="../../css/w3.css">
+<link rel="stylesheet" type="text/css" href="../../css/user.css">
+<script type="text/javascript" src="../../js/jquery-3.6.0.min.js"></script>
+<style type="text/css">
+
+</style>
+<script type="text/javascript">
+	$(document).ready(function() {
+	$("button").on("click", function() {
+		$("#container").empty();	// id가 "container"인 요소의 자식 요소를 모두 삭제함.
+	});
+});
+</script>
+</head>
+<body>
+	<h1>.empty() 메소드</h1>
+	<div id="container" style="border: solid 3px teal; padding: 5px">
+		<div>첫 번째 컨텐츠에요!</div>
+		<div>두 번째 컨텐츠에요!</div>
+		<div>세 번째 컨텐츠에요!</div>
+	</div>
+	<br>
+	<button>자식 요소 삭제</button>
+</body>
+</html>

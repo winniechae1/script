@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href="../../css/w3.css">
+<link rel="stylesheet" type="text/css" href="../../css/user.css">
+<script type="text/javascript" src="../../js/jquery-3.6.0.min.js"></script>
+<style type="text/css">
+.container * { 
+			display: block;
+			border: 1px solid lightgray;
+			padding: 5px;
+			margin: 15px;
+		}
+</style>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('button').on('click',function(){
+			$('p').parent().css('border','2px solid red');
+		});
+	});
+</script>
+</head>
+<body>
+	<h1>.parent() 메소드</h1>
+	<div class="container">
+		<div>div 요소
+			<ul>ul 요소
+				<li>li 요소</li>
+				<li>li 요소
+					<p>p 요소 (기준)
+						<span>span 요소</span>
+					</p>
+				</li>
+				<li>li 요소</li>
+			</ul>
+		</div>
+	</div>
+
+	<button>p 요소의 부모 요소</button>
+</body>
+</html>
